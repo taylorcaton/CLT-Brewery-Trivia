@@ -1,21 +1,22 @@
-var questions = [];
+var questions
 
-var	q1: {
-		question: "Click on answer 1",
-		answers: ["Answer1", "Answer2", "Answer3"],
-		correct: 0
-	};
-
-var	q2: {
-		question: "Click on answer 2",
-		answers: ["Answer1", "Answer2", "Answer3"],
-		correct: 1
-	};
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        questions = JSON.parse(this.responseText);
+    }
+};
+xmlhttp.open("GET", "assets/js/questions.txt", true);
+xmlhttp.send();
 
 
 function start(){
+	//Load the questions into the question array
+
 	//Load the quizbox
 	$('.quiz').append("<div class='carousel slide'>");
+
+
 }
 
 start();
