@@ -3,6 +3,9 @@ var userChoice = -1;
 var score = 0;
 
 function updateDisplay(){
+	
+	if(currentQuestion >= questions.length) return;
+
 	//Load the question
 	var tempQuestion = getQuestion();
 
@@ -37,7 +40,7 @@ function checkAnswer(){
 		//Run Correct animation
 		swal({
 			title: 'Correct!',
-			text: '',
+			text: questions[currentQuestion].text,
 			type: 'success'
 		});
 		score++;
@@ -45,10 +48,12 @@ function checkAnswer(){
 		//Run Wrong Animation
 		swal({
 			title: 'Nope!',
-			text: '',
+			text: questions[currentQuestion].text,
 			type: 'error'
 		});
 	}
+
+	currentQuestion++;
 }
 
 function displayScore(){
