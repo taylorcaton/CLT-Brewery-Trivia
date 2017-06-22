@@ -1,10 +1,19 @@
 var currentQuestion = 0;
+var userChoice = -1;
+var score = 0;
 
-function start(){
-	//Load the quizbox
+function updateDisplay(){
+	//Load the question
+	var tempQuestion = getQuestion();
 
-	//Load the questions into the question array
-	
+	//Display the Question
+	displayCurrentQuestion(tempQuestion);
+
+	//Display the Choices
+	displayCurrentAnswers(tempQuestion);
+
+	//display the score
+	displayScore();
 		
 }
 
@@ -13,13 +22,48 @@ function getQuestion(){
 }
 
 function displayCurrentQuestion(q){
-	$("#questionBox").html("<h1 class='questionText'>"+q.question+"</h1>");
+	$("#questionBox img").attr("src", questions[currentQuestion].image);
+	$("#questionBox h1").html("<h1 class='questionText'>"+q.question+"</h1>");
 }
 
 function displayCurrentAnswers(q){
+	$('#answerBox h1').empty();
 	for (var i = 0; i < q.choices.length; i++) {
-		$('#answerBox').append("<button class='btn btn-default'>"+q.choices[i]+"</button>");
+		$('#answerBox h1').append("<button class='btn btn-primary btn-lg round btn-choice' data-choice="+i+">"+q.choices[i]+"</button>");
+	}
+}
+function checkAnswer(){
+	if(userChoice == questions[currentQuestion].answer){
+		//Run Correct animation
+		swal({
+			title: 'Correct!',
+			text: '',
+			type: 'success'
+		});
+		score++;
+	}else{
+		//Run Wrong Animation
+		swal({
+			title: 'Nope!',
+			text: '',
+			type: 'error'
+		});
 	}
 }
 
-start();
+function displayScore(){
+	$("#progressBox").html("<h3>Score: " + score + "</h3>");
+}
+
+$(document).ready(function(){
+
+	$(document).on("click", ".btn-choice", function(){
+		userChoice = $(this).attr("data-choice");
+		console.log(userChoice);
+		checkAnswer();
+		updateDisplay();
+	});
+
+});
+
+updateDisplay();
