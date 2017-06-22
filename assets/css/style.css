@@ -2,3 +2,9 @@ body{
 	background-image: url('../images/backgroundT.jpg');
 	background-size: cover;
 }
+
+#questionBox, #answerBox, #progressBox, #logoBox{
+	/*sborder: 1px solid black;*/
+	margin-bottom: 15px;
+}
+
