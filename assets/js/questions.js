@@ -11,8 +11,8 @@
         {
           question: "What was Charlotte's FIRST Craft Brewery?",
           choices: ["Dilworth Brewing", "Olde Mecklenburg Brewing Co.", "Rock Bottom Brewing Co.", "Southend Brewery"],
-          answer: 0
-          image: 'assets/images/question.png'
+          answer: 0,
+          image: 'assets/images/question.png',
           text: "When it opened in 1989, Dilworth Brewing was Charlotte’s first craft brewery, offering beers like the Albemarle Ale and Reed’s Golden Pilsner."
         }
         

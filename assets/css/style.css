@@ -7,9 +7,35 @@ h1, h3{
 	color: #53180f;
 }
 
+#questionBox h1{
+	color: #f6a230;
+	font-weight: bolder;
+	-webkit-text-stroke: 2px #53180f;
+}
+
 #questionBox, #answerBox, #progressBox, #logoBox{
-	/*sborder: 1px solid black;*/
+	/*border: 1px solid black;*/
 	margin-bottom: 15px;
+
+}
+
+.midPanel{
+	display: table;
+}
+
+#questionBox{
+	display: table-cell;
+	float: none;
+}
+
+#answerBox{
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: table-cell;
+    float: none;
 }
 
 .btn {
@@ -19,8 +45,11 @@ h1, h3{
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    display: block;
     transition: 1.0s;
+    flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn-lg.round {
