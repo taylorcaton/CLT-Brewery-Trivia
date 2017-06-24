@@ -1,16 +1,21 @@
 function fillBeer(b){ //if true fill up
-    var h = "";
+  
+  var h = "";
 
   if(b){
     h="100%"
+    $("#container").toggle()
   }else {
     h="0%";
   }
 
   $('#liquid') // I Said Fill 'Er Up!
-    .delay(1000)
     .animate({
       height: h
-    }, 2500);
+    }, 2000);
 
 };
+
+function displayBeer(){
+  $("#container").toggle()
+}

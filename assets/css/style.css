@@ -24,7 +24,7 @@ h3{
 }
 
 .midPanel{
-	display: table;
+	/*display: table;*/
     background-color: rgba(0,0,0,0.8);
 }
 

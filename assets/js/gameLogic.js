@@ -25,7 +25,7 @@ function getQuestion(){
 
 function displayCurrentQuestion(q){
 	$("#questionBox img").attr("src", questions[currentQuestion].image);
-	$("#questionBox h2").html("<h2 class='questionText'>"+q.question+"</h2>");
+	$("#questionBox h2").html("<h2 class='questionText small'>"+q.question+"</h2>");
 }
 
 function displayCurrentAnswers(q){
@@ -69,10 +69,10 @@ function displayResults(){
 	console.log(result);
 	var str = "You scored " + score + " out of " + (questions.length) + ". ";
 
-	if(score >= 1) str += "PERFECT";
-	else if(score >= 0.5) str += "Nice Job!";
-	else if(score >= 0.2) str += "Nice...";
-	else str += "Try again!"
+	if(score >= 1) str += "\nPERFECT!!";
+	else if(score >= 0.5) str += "\nNice Job!";
+	else if(score >= 0.2) str += "\nHmmm...";
+	else str += "\nTry again!"
 
 	swal({
 			title: 'Results',
@@ -84,8 +84,11 @@ function displayResults(){
 $(document).ready(function(){
 
 	$(document).on("click", ".btn-choice", function(){
+		
 		fillBeer(true);
 		fillBeer(false);
+		setTimeout(displayBeer, 4000);
+		
 		userChoice = $(this).attr("data-choice");
 		console.log(userChoice);
 		checkAnswer();
