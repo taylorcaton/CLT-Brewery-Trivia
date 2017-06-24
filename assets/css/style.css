@@ -1,13 +1,16 @@
 body{
-	background-image: url('../images/backgroundT.jpg');
+	/*background-image: url('http://dm8cyuj6t42zr.cloudfront.net/wp-content/uploads/2013/01/24210341/brewery-large.jpg');*/
+    background-image: url('../images/backgroundT.jpg');
 	background-size: cover;
+    background-repeat: no-repeat;
 }
 
-h1, h3{
-	color: #53180f;
+h3{
+	color: #f6a230;
+    background-color: rgba(0,0,0,0.9);
 }
 
-#questionBox h1{
+#questionBox h2{
 	color: #f6a230;
 	font-weight: bolder;
 	-webkit-text-stroke: 2px #53180f;
@@ -17,10 +20,12 @@ h1, h3{
 	/*border: 1px solid black;*/
 	margin-bottom: 15px;
 
+
 }
 
 .midPanel{
 	display: table;
+    background-color: rgba(0,0,0,0.8);
 }
 
 #questionBox{

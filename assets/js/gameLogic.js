@@ -16,8 +16,7 @@ function updateDisplay(){
 	displayCurrentAnswers(tempQuestion);
 
 	//display the score
-	displayScore();
-		
+	displayScore();	
 }
 
 function getQuestion(){
@@ -26,7 +25,7 @@ function getQuestion(){
 
 function displayCurrentQuestion(q){
 	$("#questionBox img").attr("src", questions[currentQuestion].image);
-	$("#questionBox h1").html("<h1 class='questionText'>"+q.question+"</h1>");
+	$("#questionBox h2").html("<h2 class='questionText'>"+q.question+"</h2>");
 }
 
 function displayCurrentAnswers(q){
@@ -60,13 +59,38 @@ function displayScore(){
 	$("#progressBox").html("<h3>Score: " + score + "</h3>");
 }
 
+function endGame(){
+	return currentQuestion == questions.length;
+}
+
+function displayResults(){
+	
+	var result = score / (questions.length);
+	console.log(result);
+	var str = "You scored " + score + " out of " + (questions.length) + ". ";
+
+	if(score >= 1) str += "PERFECT";
+	else if(score >= 0.5) str += "Nice Job!";
+	else if(score >= 0.2) str += "Nice...";
+	else str += "Try again!"
+
+	swal({
+			title: 'Results',
+			text: ""+str,
+			type: 'info'
+	});
+}
+
 $(document).ready(function(){
 
 	$(document).on("click", ".btn-choice", function(){
+		fillBeer(true);
+		fillBeer(false);
 		userChoice = $(this).attr("data-choice");
 		console.log(userChoice);
 		checkAnswer();
 		updateDisplay();
+		if(endGame()) displayResults();
 	});
 
 });

@@ -1,0 +1,97 @@
+/*#container {
+  height: 370px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: -20px;
+  width: 100%;
+}*/
+
+#container div { position: absolute; bottom:0; left: 0;}
+
+.pour {
+  position: absolute;
+  left: 45%;
+  width: 20px;
+  height: 0px;
+  background-color: #edaf32;
+  border-radius: 10px
+}
+
+#liquid {
+  background-color: #edaf32;
+  border: 10px solid #edaf32;
+  border-radius: 0 0 20px 20px;
+  bottom: 0;
+  height: 0px;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0.8;
+}
+
+#liquid:after {
+  background-color: rgba(255, 255, 255, 0.25);
+  bottom: -10px;
+  content: '';
+  height: 100%;
+  left: -40px;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+  width: 110px;
+}
+
+#liquid .bubble {
+  -webkit-animation-name: bubble;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  background-color: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+@-webkit-keyframes bubble {
+  0% { bottom: 0; }
+
+   50% {
+     background-color: rgba(255, 255, 255, 0.2);
+      bottom: 50%;
+   }
+
+   100% {
+     background-color: rgba(255, 255, 255, 0);
+      bottom: 100%;
+   }
+}
+
+.bubble1 {
+  right: 10%;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-duration: 1000ms;
+}
+
+.bubble2 {
+  right: 33%;
+  -webkit-animation-delay: 700ms;
+  -webkit-animation-duration: 1100ms;
+}
+
+.bubble3 {
+  right: 66%;
+  -webkit-animation-delay: 1200ms;
+  -webkit-animation-duration: 1300ms;
+}
+
+.bubble4 {
+  right: 80%;
+  -webkit-animation-delay: 1100ms;
+  -webkit-animation-duration: 700ms;
+}
+
+.bubble5 {
+  right: 90%;
+  -webkit-animation-delay: 1300ms;
+  -webkit-animation-duration: 800ms;
+}

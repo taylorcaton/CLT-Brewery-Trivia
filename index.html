@@ -12,6 +12,9 @@
 	<!--Sweet Alert 2-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css">
 
+	<!-- Beer Animation -->
+	<link rel="stylesheet" href="assets/css/beerAnimation.css">
+
 	<!--Style-->
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -23,13 +26,13 @@
 <div class="container">
     <div class="row topPanel">
     	<div class="col-sm-12 img-fluid text-center" id="logoBox">
-    		<img src="assets/images/logo.png" width="250px">
+    		<img src="assets/images/logo.png" width="150px">
     	</div>
     </div>
     <div class="row midPanel">
     	<div class="col-md-6 text-center" id="questionBox"> <!-- Questions -->
     		<img src="#" width="150px">
-    		<h1>Question Box</h1>		
+    		<h2>Question Box</h2>		
     	</div>
     	<div class="col-md-6 text-center" id="answerBox"> <!-- Answers -->
     		<h1>Answer Box</h1>
@@ -41,6 +44,20 @@
 		</div>
 	</div>
 </div> <!--container-->
+
+<div id="container">
+  <div class="pour"></div>
+    
+    <div id="liquid">
+      <div class="bubble bubble1"></div>
+      <div class="bubble bubble2"></div>
+      <div class="bubble bubble3"></div>
+      <div class="bubble bubble4"></div>
+      <div class="bubble bubble5"></div>
+    </div>
+      
+  </div>
+</div>
 
 
 	<!--JQuery-->
@@ -59,8 +76,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 	
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.js"></script> -->
+	<script src="assets/js/beerAnimation.js"></script>
 	<script src="assets/js/questions.js"></script>
 	<script src="assets/js/gameLogic.js"></script>
+	
 
 
 
