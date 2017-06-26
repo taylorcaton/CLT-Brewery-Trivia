@@ -18,7 +18,7 @@
 
         {
           question: "At the 2014 World Beer Cup, Which beer took home a gold medal for an American IPA?",
-          choices: ["Triple C's 3C", "NoDa's Hop Drop & Roll", "Wooden Robot's What He's Having", "Birdsong's Higher Ground", "Bayne Brewing’s Jalapeño IPA"],
+          choices: ["Triple C's 3C", "NoDa's Hop Drop & Roll", "W.Robot's What He's Having", "Birdsong's Higher Ground", "Bayne’s Jalapeño IPA"],
           answer: 1,
           image: 'assets/images/wbc.png',
           text: "The World Beer Cup is held every other year in Denver. Along with the Great American Beer Festival competition, also in Denver, the two contests are considered the major ones to watch for craft brewing."

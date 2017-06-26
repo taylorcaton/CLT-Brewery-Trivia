@@ -29,9 +29,9 @@ function displayCurrentQuestion(q){
 }
 
 function displayCurrentAnswers(q){
-	$('#answerBox h1').empty();
+	$('#answerBox div').empty();
 	for (var i = 0; i < q.choices.length; i++) {
-		$('#answerBox h1').append("<button class='btn btn-primary btn-lg round btn-choice' data-choice="+i+">"+q.choices[i]+"</button>");
+		$('#answerBox div').append("<button class='btn btn-primary btn-sm round btn-choice' data-choice="+i+">"+q.choices[i]+"</button>");
 	}
 }
 function checkAnswer(){
