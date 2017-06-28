@@ -77,11 +77,29 @@ function displayResults(){
 	swal({
 			title: 'Results',
 			text: ""+str,
-			type: 'info'
-	});
+			type: 'info',
+			showCancelButton: true,
+			cancelButtonColor: '#edaf32',
+			cancelButtonText: 'Beer Me!',
+			confirmButtonText: 'Play Again!',
+			confirmButtonClass: 'btn-success',
+  			cancelButtonClass: 'btn-danger',
+	}).then(function () {
+		resetGame();
+	}, function (dismiss) {
+	  // dismiss can be 'cancel', 'overlay',
+	  // 'close', and 'timer'
+	  if (dismiss === 'cancel') {
+	    fillBeer(true);
+	  }
+	})
+
+
 }
 
 $(document).ready(function(){
+
+	updateDisplay();
 
 	$(document).on("click", ".btn-choice", function(){
 		
@@ -98,4 +116,10 @@ $(document).ready(function(){
 
 });
 
-updateDisplay();
+function resetGame(){
+	currentQuestion = 0;
+	userChoice = -1;
+	score = 0;
+	updateDisplay();
+}
+
