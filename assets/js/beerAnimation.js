@@ -1,15 +1,12 @@
 function fillBeer(b){ //if true fill up
   
   var h = "";
-  var r = "";
 
   if(b){
     h="100%"
-    r="-45"
     $("#container").toggle()
   }else {
     h="0%";
-    r="";
   }
 
   $('#liquid') // I Said Fill 'Er Up!
@@ -17,10 +14,24 @@ function fillBeer(b){ //if true fill up
       height: h
     }, 2000);
 
-  $('#logoBox img')
-    .animateRotate(-45,1000);
+  
 
 };
+
+function tipGlass(down){
+  var r = "";
+
+  if(down){
+    r = "-45"
+    console.log(down);
+  }else{
+    r = "0"
+    console.log(down);
+  }
+
+  $('#logoBox img')
+    .animateRotate(r,1000);
+}
 
 function displayBeer(){
   $("#container").toggle()

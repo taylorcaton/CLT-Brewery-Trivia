@@ -104,8 +104,10 @@ $(document).ready(function(){
 	$(document).on("click", ".btn-choice", function(){
 		
 		fillBeer(true);
+		tipGlass(true);
 		fillBeer(false);
 		setTimeout(displayBeer, 4000);
+		// setTimeout(tipGlass(false), 4000);
 		
 		userChoice = $(this).attr("data-choice");
 		console.log(userChoice);
@@ -113,6 +115,10 @@ $(document).ready(function(){
 		updateDisplay();
 		if(endGame()) displayResults();
 	});
+
+	$(document).on("click", ".swal2-buttonswrapper", function(){
+		tipGlass(false);
+	})
 
 });
 
