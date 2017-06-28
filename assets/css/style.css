@@ -79,10 +79,15 @@ h3{
     }
 }
 
-@media (max-width: @screen-xs) {
-    body{font-size: 10px;}
-}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+    
+    h2{
+        font-size: 70px;
+    }
 
-@media (max-width: @screen-sm) {
-    body{font-size: 14px;}
+    .btn-sm{
+        font-size: 18px;
+    }
 }

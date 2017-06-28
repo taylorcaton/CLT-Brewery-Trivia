@@ -26,10 +26,10 @@
 
         {
           question: "Who makes the following? Over the Edge American IPA, Pre Game Session Ale and Ginger Wheat.",
-          choices: ["Heist", "Lenny Boy", "Sugar Creek", "Sycamore", "Triple C"],
+          choices: ["Heist", "Lenny Boy", "Triple C", "Sycamore", "Unknown Brewery"],
           answer: 4,
           image: 'assets/images/question.png',
-          text: "I'm not sure what Triple C stands for..."
+          text: "Unknown is preparing a major renovation of the taproom. A side wall will be blown out and redone with roll-up doors. A second-floor patio will likely be installed with views of Uptown."
         },
 
         {
