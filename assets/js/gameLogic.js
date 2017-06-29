@@ -93,13 +93,12 @@ function displayResults(){
 	    fillBeer(true);
 	  }
 	})
-
-
 }
 
 $(document).ready(function(){
 
 	updateDisplay();
+
 
 	$(document).on("click", ".btn-choice", function(){
 		
@@ -128,4 +127,3 @@ function resetGame(){
 	score = 0;
 	updateDisplay();
 }
-
