@@ -98,6 +98,7 @@ function displayResults(){
 $(document).ready(function(){
 
 	updateDisplay();
+	runTimer();
 
 
 	$(document).on("click", ".btn-choice", function(){
@@ -126,4 +127,5 @@ function resetGame(){
 	userChoice = -1;
 	score = 0;
 	updateDisplay();
+	runTimer();
 }

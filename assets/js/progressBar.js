@@ -28,7 +28,8 @@ function createProgressbar(id, duration, callback) {
   progressbarinner.style.animationPlayState = 'running';
 }
 
-addEventListener('load', function() {
+// addEventListener('load', function() {
+function runTimer(){
   createProgressbar('progressbar4', '120s', function() {
     //  Alert the user that time is up.
     swal({
@@ -38,4 +39,5 @@ addEventListener('load', function() {
       resetGame();
     });
   });
-});
+}
+// });
