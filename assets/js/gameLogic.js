@@ -69,9 +69,9 @@ function displayResults(){
 	console.log(result);
 	var str = "You scored " + score + " out of " + (questions.length) + ". ";
 
-	if(score >= 1) str += "\nPERFECT!!";
-	else if(score >= 0.5) str += "\nNice Job!";
-	else if(score >= 0.2) str += "\nHmmm...";
+	if(result >= 1) str += "\nPERFECT!!";
+	else if(result >= 0.5) str += "\nNice Job!";
+	else if(result >= 0.2) str += "\nHmmm...";
 	else str += "\nTry again!"
 
 	swal({
