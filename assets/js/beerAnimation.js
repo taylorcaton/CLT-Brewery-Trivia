@@ -1,8 +1,15 @@
+var fillUp = new Howl({
+  src: ['assets/sfx/fillUp.mp3'],
+  ext: ['mp3'],
+  html5: true
+});
+
 function fillBeer(b){ //if true fill up
   
   var h = "";
 
   if(b){
+    fillUp.play();
     h="100%"
     $("#container").toggle()
   }else {
